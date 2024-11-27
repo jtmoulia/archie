@@ -1,10 +1,11 @@
 /* Markdown */
 :root{
---maincolor: red;
---bordercl:rebeccapurple;
---callouctcolor:dodgerblue;
---hovercolor:navy;
+--maincolor: #ff5555;
+--bordercl: #bd93f9;
+--callouctcolor: #8be9fd;
+--hovercolor: #6272a4;
 --darkMaincolor: #50fa7b;
+--rainbow: linear-gradient(to left, #ff5555, #ffb86c, #f1fa8c, #50fa7b, #8be9fd, #bd93f9, #ff79c6);
 }
 html {
   color: #232333;
@@ -25,7 +26,7 @@ body{
   color: #fff;
 }
 
-p {
+p, ol, ul {
   font-family: 'Fira Sans', sans-serif;
   line-height: 1.5;
 }
@@ -52,6 +53,9 @@ a:hover {
     background-color: var(--hovercolor);
     color: #fff;
 }
+a:not(.main a) {
+  border-bottom: 3px solid var(--hovercolor);
+}
 
 ul {
   list-style: none;
@@ -61,7 +65,7 @@ ul li {
   text-indent: -2ch;
 }
 ul > li::before {
-  content: '* ';
+  content: '‣ ';
   font-weight: bold;
 }
 
@@ -149,12 +153,18 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2em;
 }
 
-h1::before { color: var(--maincolor); content: '# '; }
-h2::before { color: var(--maincolor); content: '## '; }
-h3::before { color: var(--maincolor); content: '### '; }
-h4::before { color: var(--maincolor); content: '#### '; }
-h5::before { color: var(--maincolor); content: '##### '; }
-h6::before { color: var(--maincolor); content: '###### '; }
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+    background: var(--rainbow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+h1::before { content: '# '; }
+h2::before { content: '## '; }
+h3::before { content: '### '; }
+h4::before { content: '#### '; }
+h5::before { content: '##### '; }
+h6::before { content: '###### '; }
 
 .meta {
   color: #999;
@@ -236,11 +246,11 @@ justify-content: space-between;
   content: "🏷 ";
 }
 .tags a{
-  border-bottom: 3px solid var(--maincolor); 
+  border-bottom: 3px solid var(--maincolor);
 }
 .tags a:hover{
   color:white;
-  background-color: var(--hovercolor); 
+  background-color: var(--hovercolor);
 }
 svg{
   max-height: 15px;
@@ -248,7 +258,7 @@ svg{
 .soc:hover{
   color: white;
 }
-.draft-label{ 
+.draft-label{
     color: var(--bordercl);
     text-decoration: none;
     padding: 2px 4px;
@@ -299,7 +309,7 @@ color:white
 .highlight pre code[class*='language-json']::before{
 content: 'json';
 background: dodgerblue;
- color: #000000 
+ color: #000000
 }
 .highlight pre code[class*='language-python']::before,
 .highlight pre code[class*='language-py']::before {
