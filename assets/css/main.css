@@ -57,6 +57,10 @@ a:not(.main a) {
   border-bottom: 3px solid var(--hovercolor);
 }
 
+.main a:hover {
+    background: var(--rainbow);
+}
+
 ul {
   list-style: none;
   padding-left: 2ch;
@@ -191,7 +195,7 @@ footer {
 .soc {
   display: flex;
   align-items: center;
-  border-bottom: none;
+  border-bottom: none !important;
 }
 .border {
   margin-left: 0.5rem;
