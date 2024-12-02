@@ -31,7 +31,8 @@ body{
 
 p, ol, ul {
   font-family: 'Fira Sans', sans-serif;
-  line-height: 1.5;
+  line-height: 1.8;
+  font-size: 1.2rem;
 }
 
 hr {
@@ -148,7 +149,7 @@ h1.title {
 }
 article h1 {
     font-size: 2rem;
-    line-height: 1.5em;
+    line-height: 1.2em;
     margin-top: 1em;
 }
 article h2 {
