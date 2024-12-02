@@ -13,7 +13,7 @@
 html {
   color: var(--blackcolor);
   font-family: 'Roboto Mono', monospace;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.6em;
 }
 body{
@@ -32,7 +32,6 @@ body{
 p, ol, ul {
   font-family: 'Fira Sans', sans-serif;
   line-height: 1.8;
-  font-size: 1.2rem;
 }
 
 hr {
@@ -117,7 +116,7 @@ pre {
 pre code {
   background-color: transparent;
   color: inherit;
-  font-size: 100%;
+  font-size: 0.8rem;
   padding: 0;
 }
 
@@ -140,20 +139,16 @@ header {
   line-height: 2.5em;
 }
 
-header .main {
-  font-size: 15px;
-}
-
 h1.title {
     margin-bottom: 0;
 }
 article h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 1.2em;
     margin-top: 1em;
 }
 article h2 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   margin-top: 2em;
 }
 h1, h2, h3, h4, h5, h6 {
