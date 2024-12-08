@@ -13,7 +13,6 @@
 html {
   color: var(--blackcolor);
   font-family: 'Roboto Mono', monospace;
-  font-size: 18px;
   line-height: 1.6em;
 }
 body{
@@ -27,6 +26,10 @@ body{
 ::selection {
   background: var(--maincolor);
   color: var(--whitecolor);
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 p, ol, ul {
@@ -56,7 +59,7 @@ ul {
   padding-left: 2ch;
 }
 ul li {
-  text-indent: -2ch;
+  text-indent: -1.2ch;
 }
 ul > li::before {
   content: '‣ ';
